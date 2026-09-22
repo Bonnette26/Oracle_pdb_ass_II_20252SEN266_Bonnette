@@ -5,7 +5,7 @@ This repository contains the technical documentation and evidence for Individual
 
 ## 2. Oracle Environment Used
 * **Operating System:** Windows 11 (64-bit)
-* **Database Edition:** Oracle Database 19c Enterprise Edition
+* **Database Edition:** Oracle Database 26ai
 * **Tools Used:** SQL*Plus, Command Prompt (CMD), GitHub
 
 ## 3. Explanation of Each Task
@@ -32,7 +32,9 @@ A separate temporary lifecycle database configuration was tested to demonstrate 
 
 ### 1. Oracle Enterprise Manager (OEM) Port Binding & Timeout Failures
 * **Problem:** During the execution of Task 3, running configuration verification calls like `dbms_xdb_config.gethttpsport` failed to securely bind or expose the management UI. Attempting to connect via the browser console yielded indefinite server connection timeouts and SSL layer protocol validation drops.
+* 
 * **Troubleshooting Steps Taken:** Checked local operational logs using `lsnrctl status` to guarantee that the primary database listener was intercepting system requests. Local Windows firewall exceptions were briefly added for ports `5500` and `5501` along with localized router loopback checks. The database engine configuration files resisted binding to a accessible network interface layout on this specific operating system setup.
+* 
 * **Resolution:** To preserve assignment delivery timelines, standard administrative SQL terminal access via SQL*Plus was used as an absolute replacement to execute and fulfill the database architectures required in Tasks 1 and 2.
 
 ---
